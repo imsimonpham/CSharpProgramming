@@ -4,10 +4,9 @@ public class SelectDifficulty : MonoBehaviour
 {
     public enum LevelSelector
     {
-        Easy, //0
-        Normal, //1
-        Hard, //2
-        Expert, //3
+        Easy, 
+        Normal, 
+        Hard
     }
 
     public LevelSelector _currentLevel;
@@ -21,8 +20,6 @@ public class SelectDifficulty : MonoBehaviour
             case LevelSelector.Normal:
                 break;
             case LevelSelector.Hard:
-                break;
-            case LevelSelector.Expert:
                 break;
         }
     }
