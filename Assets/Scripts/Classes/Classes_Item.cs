@@ -5,19 +5,13 @@ using UnityEngine;
 [System.Serializable]
 public class Classes_Item
 {
-    public string name;
-    public int id;
-    public string description;
+    protected string name;
+    protected int id;
+    protected string description;
+    protected Sprite icon;
 
-    public Classes_Item()
+    protected void EquipItem()
     {
 
-    }
-
-    public Classes_Item(string name, int id, string description)
-    {
-        this.name = name;
-        this.id = id;
-        this.description = description;
     }
 }
