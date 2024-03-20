@@ -19,5 +19,5 @@ public class Properties_Player
         }
     }*/
 
-    public int Experience {  get; set; }
+    public int Experience {get; set;}
 }
