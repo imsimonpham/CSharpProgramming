@@ -3,25 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
 
-public class Color : MonoBehaviour
+
+namespace Coroutines
 {
-
-    private MeshRenderer _renderer;
-    private WaitForSeconds _colorChangeWait = new WaitForSeconds(3f);
-    // Start is called before the first frame update
-    void Start()
+    public class Color : MonoBehaviour
     {
-        _renderer = GetComponent<MeshRenderer>();
-        StartCoroutine(ColorRoutine());
-    }
 
-    IEnumerator ColorRoutine()
-    {
-        while (true)
+        private MeshRenderer _renderer;
+        private WaitForSeconds _colorChangeWait = new WaitForSeconds(3f);
+        internal static UnityEngine.Color green;
+
+        // Start is called before the first frame update
+        void Start()
         {
-            _renderer.material.color = Random.ColorHSV();
-            yield return _colorChangeWait;
+            _renderer = GetComponent<MeshRenderer>();
+            StartCoroutine(ColorRoutine());
         }
 
+        IEnumerator ColorRoutine()
+        {
+            while (true)
+            {
+                _renderer.material.color = Random.ColorHSV();
+                yield return _colorChangeWait;
+            }
+
+        }
     }
 }
+
