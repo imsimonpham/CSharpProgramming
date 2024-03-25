@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lists_Test : MonoBehaviour
 {
-    [SerializeField] private List<string> _names;
+    [SerializeField] private List<string> _names = new List<string>();
 
     private void Start()
     {
